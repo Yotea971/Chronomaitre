@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title if(secondes < 10){ secondes="0" + secondes; } };>Chronomètre</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="chrono">00:00:00</div>
+      <div id="buttuns">
+        <button id="reset" class="button">Recommencer</button>
+        <button id="stop" class="button">Arrêter</button>
+        <button id="start" class="button">Démarrer</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
