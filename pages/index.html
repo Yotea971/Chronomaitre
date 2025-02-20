@@ -3,18 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title if(secondes < 10){ secondes="0" + secondes; } };>Chronomètre</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Digitale Horloge</title>
+    <link rel="stylesheet" href="/asset/style.css" />
   </head>
   <body>
-    <div id="wrapper">
-      <div id="chrono">00:00:00</div>
-      <div id="buttuns">
-        <button id="reset" class="button">Recommencer</button>
-        <button id="stop" class="button">Arrêter</button>
-        <button id="start" class="button">Démarrer</button>
+    <div class="hero">
+      <div class="container">
+        <div class="clock">
+          <span id="hrs">00</span>
+          <span>:</span>
+          <span id="min">00</span>
+          <span>:</span>
+          <span id="sec">00</span>
+        </div>
       </div>
     </div>
-    <script src="app.js"></script>
+
+    <script>
+      let hrs = document.getElementById("hrs");
+      let min = document.getElementById("min");
+      let sec = document.getElementById("sec");
+
+      setInterval(() => {
+        let currentTime = new Date();
+        hrs.innerHTML =
+          (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
+        min.innerHTML =
+          (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
+        sec.innerHTML =
+          (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
+      }, 1000);
+    </script>
   </body>
 </html>
