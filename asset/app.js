@@ -12,7 +12,7 @@ let timeout;
 let estArret = true;
 
 const demarrer = () => {
-    if(etsArreter){
+    if(estArret){
         estArret = false;
         defilerTemps();
     }
@@ -34,7 +34,7 @@ const defilerTemps = () => {
 
     secondes++;
 
-    if(seconde == 60){
+    if(secondes == 60){
         minutes++;
         secondes = 0;
     }
